@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 
+// If you fork this project, replace my firebase key in ./component/firebase.utils.js with your ơwn firebase key
+
 ReactDOM.render(
     <BrowserRouter>
         <React.StrictMode>
