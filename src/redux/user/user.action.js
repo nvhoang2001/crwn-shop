@@ -1,4 +1,6 @@
+import { SET_USER_ACTION } from "../config";
+
 export const setCurrentUser = user => ({
-    type: "SET_CURRENT_USER",
+    type: SET_USER_ACTION,
     payload: user,
 });
