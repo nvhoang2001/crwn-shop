@@ -1,2 +1,3 @@
 export const SET_USER_ACTION = "SET_CURRENT_USER";
 export const TOGGLE_CART_HIDDEN = "TOGGLE_CART_HIDDEN";
+export const CART_ADD_ITEM = "CART_ADD_ITEM";
