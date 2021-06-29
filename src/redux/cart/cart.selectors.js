@@ -1,6 +1,12 @@
 import { createSelector } from "reselect";
+import { propsSum } from "../helpers";
 
 const selectCart = state => state.cart;
+
+export const selectCartHidden = createSelector(
+    [selectCart],
+    cart => cart.hidden
+);
 
 export const selectCartItems = createSelector(
     [selectCart],
@@ -9,5 +15,9 @@ export const selectCartItems = createSelector(
 
 export const selectCartItemsCount = createSelector(
     [selectCartItems],
-    cartItems => cartItems.reduce((count, item) => count + item.quantity, 0)
+    cartItems => propsSum(cartItems, "quantity")
+);
+
+export const selectCartTotal = createSelector([selectCartItems], cartItems =>
+    cartItems.reduce((total, item) => total + item.quantity * item.price, 0)
 );
